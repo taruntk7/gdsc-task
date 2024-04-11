@@ -23,7 +23,6 @@ class Board:
     def move_task(self, title, from_status, to_status):
         self.tasks[from_status] = [task for task in self.tasks[from_status] if task.title != title]
         self.tasks[to_status].append(title)
-        
 
     def display_board(self):
         print(f"\nProject: {self.project_name}")
